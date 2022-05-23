@@ -1,10 +1,13 @@
 import { TextField } from "@mui/material";
 import React from "react";
-
+import { motion } from "framer-motion";
 const LoginInputs = ({ typeText }) => {
   return (
     <>
-      <div>
+      <motion.div
+        animate={{ x: [0, 100, 0] }}
+        transition={{ duration: 5 }}
+      >
         <TextField
           id="outlined-basic"
           label={typeText}
@@ -14,10 +17,10 @@ const LoginInputs = ({ typeText }) => {
             height: "30px",
             color: "#969696",
             opacity: "100%",
-            marginBottom:'10px'
+            marginBottom: "10px",
           }}
         />
-      </div>
+      </motion.div>
     </>
   );
 };
